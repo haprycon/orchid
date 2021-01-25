@@ -12,4 +12,8 @@ export default class BrowserSync {
       this.browserSync.init(config)
     });
   }
+
+  reload() {
+    return this.browserSync.stream();
+  }
 }

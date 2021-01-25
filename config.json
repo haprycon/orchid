@@ -1,7 +1,10 @@
 {
+  "src": "./src",
+  "dest": "./dest",
+  "tmp": "./.tmp",
   "browserSync" : {
     "server": {
-      "baseDir": "dist",
+      "baseDir": "./.tmp",
       "directory": true
     },
     "notify": false,
