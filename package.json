@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/haprycon/orchid/issues"
   },
-  "homepage": "https://github.com/haprycon/orchid#readme"
+  "homepage": "https://github.com/haprycon/orchid#readme",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
 }
