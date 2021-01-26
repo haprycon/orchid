@@ -9,6 +9,7 @@ export default class Watch {
   init() {
     gulp.task('watch', () => {
       gulp.watch(`${this.config.src}/views/**/*.twig`, gulp.series('twig'))
+      gulp.watch(`${this.config.src}/mocks/**/*.json`, gulp.series('twig'))
     });
   }
 }

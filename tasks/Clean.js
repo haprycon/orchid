@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import fs from "fs";
+import fs from 'fs';
 
 export default class Clean {
   constructor(config) {

@@ -12,5 +12,7 @@ new Watch(config);
 new Clean(config);
 
 gulp.task('dev', gulp.series(
-  gulp.parallel('watch', 'server')
+  gulp.parallel('clean'),
+  gulp.parallel('twig'),
+  gulp.parallel('watch', 'server'),
 ));
