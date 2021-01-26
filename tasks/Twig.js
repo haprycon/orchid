@@ -3,13 +3,14 @@ import twig from 'gulp-twig';
 
 export default class Twig {
   constructor(config, browserSync) {
-    this.init(config);
+    this.config = config;
     this.browserSync = browserSync;
+    this.init();
   }
 
-  init(config) {
-    this.setTask('twig', config.src, config.tmp);
-    this.setTask('twig:build', config.src, config.dest);
+  init() {
+    this.setTask('twig', this.config.src, this.config.tmp);
+    this.setTask('twig:build', this.config.src, this.config.dest);
   }
 
   setTask(name, source, dest) {
