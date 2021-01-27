@@ -31,5 +31,8 @@
     "glob": "^7.1.6",
     "gulp": "^4.0.2",
     "gulp-twig": "^1.2.0"
+  },
+  "dependencies": {
+    "gulp-sass": "^4.1.0"
   }
 }
