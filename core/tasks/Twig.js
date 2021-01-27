@@ -38,6 +38,6 @@ export default class Twig {
 
   getClassFunctions(object) {
     return Object.getOwnPropertyNames(Object.getPrototypeOf(object)).filter(item => item !== 'constructor')
-      .map(name => ({name: name, func: (args) => object[name](args)}));
+      .map(name => ({name: name, func: object[name]}));
   }
 }
