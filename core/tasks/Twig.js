@@ -28,7 +28,7 @@ export default class Twig {
           filters: this.getClassFunctions((new TwigFilters())),
         }))
         .pipe(gulp.dest(dest))
-        .pipe(this.browserSync.reload())
+        .pipe(this.browserSync.reload());
     })
   }
 
