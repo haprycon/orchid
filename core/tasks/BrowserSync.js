@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import browserSync from 'browser-sync'
+import browserSync from 'browser-sync';
 
 export default class BrowserSync {
   constructor(config) {
