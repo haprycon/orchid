@@ -10,5 +10,6 @@
     "notify": false,
     "open": true,
     "logPrefix": "Orchid"
-  }
+  },
+  "scriptsSourceMaps": true
 }

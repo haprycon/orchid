@@ -1,5 +1,7 @@
 import gulp from 'gulp';
-import babel from 'gulp-babel';
+import browserify from 'browserify';
+import babelify from 'babelify';
+import vinylSource from 'vinyl-source-stream';
 
 export default class Scripts {
   constructor(config, browserSync) {
@@ -15,14 +17,16 @@ export default class Scripts {
 
   setTask(name, source, dest) {
     gulp.task(name, () => {
-      return gulp.src(`${source}/js/*.js`)
-        .pipe(babel({
-          presets: ['@babel/env'],
-        }))
-        .pipe(gulp.dest(`${dest}/js`))
-        .pipe(this.browserSync.reload());
+      return browserify({
+        entries: [`${source}/js/app.js`],
+        debug: this.config.scriptsSourceMaps,
+        transform: [
+          babelify.configure({presets: ['@babel/preset-env']}),
+        ],
+      }).bundle()
+          .pipe(vinylSource('app.js'))
+          .pipe(gulp.dest(`${dest}/js`))
+          .pipe(this.browserSync.reload());
     });
   }
-
-
 }
