@@ -17,6 +17,6 @@ new Clean(config);
 
 gulp.task('dev', gulp.series(
   gulp.parallel('clean'),
-  gulp.parallel('twig', 'scss', 'js'),
+  gulp.parallel('twig', 'scss', 'scripts'),
   gulp.parallel('watch', 'server'),
 ));
