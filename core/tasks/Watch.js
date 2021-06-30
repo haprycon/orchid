@@ -12,6 +12,8 @@ export default class Watch {
       gulp.watch(`${this.config.src}/mocks/**/*.json`, gulp.series('twig'))
       gulp.watch(`${this.config.src}/css/**/*.scss`, gulp.series('scss'))
       gulp.watch(`${this.config.src}/scripts/**/*.js`, gulp.series('scripts'))
+      gulp.watch(`${this.config.src}/assets/svg-sprite/**/*.svg`, gulp.series('svg-sprite'))
+      gulp.watch(`${this.config.src}/assets/svg-sprite-inline/**/*.svg`, gulp.series('svg-sprite-inline'))
     });
   }
 }
