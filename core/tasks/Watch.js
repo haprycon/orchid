@@ -14,6 +14,7 @@ export default class Watch {
       gulp.watch(`${this.config.src}/scripts/**/*.js`, gulp.series('scripts'))
       gulp.watch(`${this.config.src}/assets/svg-sprite/**/*.svg`, gulp.series('svg-sprite'))
       gulp.watch(`${this.config.src}/assets/svg-sprite-inline/**/*.svg`, gulp.series('svg-sprite-inline'))
+      gulp.watch(`${this.config.src}/assets/png-sprite/**/*.png`, gulp.series('png-sprite'))
     });
   }
 }
