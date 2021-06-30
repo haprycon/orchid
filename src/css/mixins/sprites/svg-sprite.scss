@@ -1,4 +1,4 @@
-$sprite: map-get($icons, sprite) !default;
+$sprite: map-get($svgSprite, sprite) !default;
 
 @function pxToEm($px, $base-font-size: 14px) {
   @return $px;
@@ -12,7 +12,7 @@ $sprite: map-get($icons, sprite) !default;
 }
 
 @function svgSpriteAttribute($icon, $attr) {
-  $newIcon: map-get($icons, $icon);
+  $newIcon: map-get($svgSprite, $icon);
   @if $newIcon == null {
     @warn "Can't find an icon with the name #{$icon}";
   }
