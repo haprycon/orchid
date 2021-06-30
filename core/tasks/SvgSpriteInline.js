@@ -22,7 +22,7 @@ export default class SvgSpriteInline {
                             dest: '.',
                             example: false,
                             bust: false,
-                            sprite: `${dest}/assets/svg-sprite/inline.svg`,
+                            sprite: `${dest}/assets/sprite/inline.svg`,
                             inline: false,
                             render: {
                                 scss: {

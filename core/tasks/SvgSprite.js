@@ -24,7 +24,7 @@ export default class SvgSprite {
                             },
                             layout: "diagonal",
                             dest: ".",
-                            sprite: `${dest}/assets/svg-sprite/sprite.svg`,
+                            sprite: `${dest}/assets/sprite/sprite.svg`,
                             bust: false,
                             render: {
                                 "scss": {
